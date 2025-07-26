@@ -85,7 +85,7 @@ class App {
             
             // Show welcome message
             setTimeout(() => {
-                showToast('Welcome to PopOut Tickets!', 'success');
+                showToast('Welcome to Lite Events Tickets!', 'success');
             }, 1000);
         }
     }
@@ -347,6 +347,6 @@ window.showToast = showToast;
 window.showPage = showPage;
 
 // Console welcome message
-console.log('%c🎟️ PopOut Tickets', 'color: #6366f1; font-size: 24px; font-weight: bold;');
-console.log('%cWelcome to PopOut Tickets! Event management made simple.', 'color: #64748b; font-size: 14px;');
-console.log('%cFor debugging, use: PopOutApp', 'color: #64748b; font-size: 12px;');
+console.log('%cLite Events Tickets', 'color: #6366f1; font-size: 24px; font-weight: bold;');
+console.log('%cWelcome to Lite Events Tickets! Event management made simple.', 'color: #64748b; font-size: 14px;');
+console.log('%cFor debugging, use: LiteEventsApp', 'color: #64748b; font-size: 12px;');

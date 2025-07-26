@@ -135,7 +135,7 @@ class AuthManager {
 
         this.updateUI();
         this.closeAuthModal();
-        showToast(`Welcome to PopOut Tickets, ${name}!`, 'success');
+        showToast(`Welcome to Lite Events Tickets, ${name}!`, 'success');
     }
 
     logout() {
