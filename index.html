@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiteEvents Tickets - Event Management System</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h2>Lite Events Tickets</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#" class="nav-link" data-page="home">Home</a>
+                <a href="#" class="nav-link" data-page="events">Events</a>
+                <a href="#" class="nav-link" data-page="create-event">Create Event</a>
+                <a href="#" class="nav-link" data-page="my-tickets">My Tickets</a>
+                <div class="nav-auth">
+                    <button class="btn btn-outline" id="login-btn">Login</button>
+                    <button class="btn btn-primary" id="signup-btn">Sign Up</button>
+                    <div class="user-menu hidden" id="user-menu">
+                        <span class="user-name" id="user-name"></span>
+                        <button class="btn btn-outline" id="logout-btn">Logout</button>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Home Page -->
+        <div class="page active" id="home-page">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Discover Amazing Events</h1>
+                    <p>Find and book tickets for concerts, conferences, workshops, and more</p>
+                    <div class="hero-search">
+                        <input type="text" placeholder="Search events..." id="hero-search">
+                        <button class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Event">
+                </div>
+            </section>
+
+            <!-- Featured Events -->
+            <section class="featured-events">
+                <div class="container">
+                    <h2>Featured Events</h2>
+                    <div class="events-grid" id="featured-events-grid">
+                        <!-- Events will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Categories -->
+            <section class="categories">
+                <div class="container">
+                    <h2>Browse by Category</h2>
+                    <div class="categories-grid">
+                        <div class="category-card" data-category="music">
+                            <div class="category-icon">🎵</div>
+                            <h3>Music</h3>
+                        </div>
+                        <div class="category-card" data-category="business">
+                            <div class="category-icon">💼</div>
+                            <h3>Business</h3>
+                        </div>
+                        <div class="category-card" data-category="sports">
+                            <div class="category-icon">⚽</div>
+                            <h3>Sports</h3>
+                        </div>
+                        <div class="category-card" data-category="arts">
+                            <div class="category-icon">🎨</div>
+                            <h3>Arts</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Events Page -->
+        <div class="page" id="events-page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>All Events</h1>
+                    <div class="filters">
+                        <select id="category-filter">
+                            <option value="">All Categories</option>
+                            <option value="music">Music</option>
+                            <option value="business">Business</option>
+                            <option value="sports">Sports</option>
+                            <option value="arts">Arts</option>
+                        </select>
+                        <select id="date-filter">
+                            <option value="">All Dates</option>
+                            <option value="today">Today</option>
+                            <option value="tomorrow">Tomorrow</option>
+                            <option value="this-week">This Week</option>
+                            <option value="this-month">This Month</option>
+                        </select>
+                        <input type="text" placeholder="Search events..." id="events-search">
+                    </div>
+                </div>
+                <div class="events-grid" id="all-events-grid">
+                    <!-- Events will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Create Event Page -->
+        <div class="page" id="create-event-page">
+            <div class="container">
+                <div class="form-container">
+                    <h1>Create New Event</h1>
+                    <form id="create-event-form">
+                        <div class="form-group">
+                            <label for="event-title">Event Title</label>
+                            <input type="text" id="event-title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-description">Description</label>
+                            <textarea id="event-description" rows="4" required></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="event-category">Category</label>
+                                <select id="event-category" required>
+                                    <option value="">Select Category</option>
+                                    <option value="music">Music</option>
+                                    <option value="business">Business</option>
+                                    <option value="sports">Sports</option>
+                                    <option value="arts">Arts</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="event-price">Ticket Price ($)</label>
+                                <input type="number" id="event-price" min="0" step="0.01" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="event-date">Date</label>
+                                <input type="date" id="event-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="event-time">Time</label>
+                                <input type="time" id="event-time" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-location">Location</label>
+                            <input type="text" id="event-location" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-capacity">Capacity</label>
+                            <input type="number" id="event-capacity" min="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-image">Event Image URL</label>
+                            <input type="url" id="event-image" placeholder="https://example.com/image.jpg">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Create Event</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- My Tickets Page -->
+        <div class="page" id="my-tickets-page">
+            <div class="container">
+                <h1>My Tickets</h1>
+                <div class="tickets-container" id="tickets-container">
+                    <!-- Tickets will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Event Details Modal -->
+    <div class="modal" id="event-modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <div class="event-details" id="event-details">
+                <!-- Event details will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Modal -->
+    <div class="modal" id="auth-modal">
+        <div class="modal-content">
+            <span class="close" id="close-auth-modal">&times;</span>
+            <div class="auth-container">
+                <div class="auth-form" id="login-form">
+                    <h2>Login</h2>
+                    <form id="login-form-element">
+                        <div class="form-group">
+                            <label for="login-email">Email</label>
+                            <input type="email" id="login-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Login</button>
+                    </form>
+                    <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+                </div>
+                <div class="auth-form hidden" id="signup-form">
+                    <h2>Sign Up</h2>
+                    <form id="signup-form-element">
+                        <div class="form-group">
+                            <label for="signup-name">Full Name</label>
+                            <input type="text" id="signup-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email</label>
+                            <input type="email" id="signup-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Sign Up</button>
+                    </form>
+                    <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Purchase Modal -->
+    <div class="modal" id="purchase-modal">
+        <div class="modal-content">
+            <span class="close" id="close-purchase-modal">&times;</span>
+            <div class="purchase-container">
+                <h2>Purchase Tickets</h2>
+                <div class="purchase-details" id="purchase-details">
+                    <!-- Purchase details will be populated by JavaScript -->
+                </div>
+                <form id="purchase-form">
+                    <div class="form-group">
+                        <label for="ticket-quantity">Number of Tickets</label>
+                        <input type="number" id="ticket-quantity" min="1" max="10" value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardholder-name">Cardholder Name</label>
+                        <input type="text" id="cardholder-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry-date">Expiry Date</label>
+                            <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" placeholder="123" required>
+                        </div>
+                    </div>
+                    <div class="total-amount">
+                        <strong>Total: $<span id="total-amount">0.00</span></strong>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Purchase Tickets</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/tickets.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
