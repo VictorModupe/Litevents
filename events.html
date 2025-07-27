@@ -1,18 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Popout Tickets – Your Gateway to Unforgettable Live Events</title>
-    <meta name="description" content="Discover and book tickets for concerts, sports, theater, and more with Popout Tickets. Experience seamless booking, curated events, and exceptional customer service for every occasion.">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Events - Popout Tickets</title>
+    <meta name="description" content="Discover amazing events near you. Find concerts, sports, theater shows, and more with Popout Tickets.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
-  </head>
-  <body>
-   <!-- Header -->
+</head>
+<body>
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="nav">
@@ -48,104 +47,49 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" style="padding: 3rem 0 4rem;">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="hero-title">
-                        Your Front Row Seat
-                        <br>
-                        <span class="text-gradient">to Life's Best Moments</span>
+                    <h1 class="hero-title" style="font-size: 3rem;">
+                        Discover <span class="text-gradient">Amazing Events</span>
                     </h1>
-
                     <p class="hero-description">
-                        Effortlessly book your next unforgettable live experience with Popout Tickets.
-                        Explore a curated selection of electrifying concerts, thrilling sports events,
-                        and captivating performances—all at your fingertips.
+                        Find the perfect event for you. From concerts to sports, theater to festivals - we have it all.
                     </p>
-
-                    <div class="hero-buttons">
-                        <a href="events.html" class="btn btn-primary btn-large">
-                            Find Events
-                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M5 12h14M12 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-
-                        <a href="create-event.html" class="btn btn-outline btn-large">
-                            Create Events
-                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M5 12h14M12 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                    </div>
                 </div>
-            </div>
-
-            <!-- Background decoration -->
-            <div class="hero-bg">
-                <div class="hero-bg-circle hero-bg-circle-1"></div>
-                <div class="hero-bg-circle hero-bg-circle-2"></div>
-                <div class="hero-bg-circle hero-bg-circle-3"></div>
             </div>
         </section>
 
-        <!-- Image Gallery -->
-        <section class="image-gallery">
+        <!-- Search and Filter Section -->
+        <section class="search-filter-section">
             <div class="container">
-                <div class="gallery-container">
-                    <div class="gallery-track" id="galleryTrack">
-                        <div class="gallery-slide active">
-                            <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg" alt="Concert Event">
-                        </div>
-                        <div class="gallery-slide">
-                            <img src="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg" alt="Sports Event">
-                        </div>
-                        <div class="gallery-slide">
-                            <img src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg" alt="Theater Performance">
-                        </div>
-                        <div class="gallery-slide">
-                            <img src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg" alt="Festival Event">
-                        </div>
-                        <div class="gallery-slide">
-                            <img src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg" alt="Conference Event">
-                        </div>
-                        <div class="gallery-slide">
-                            <img src="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg" alt="Live Performance">
-                        </div>
-                    </div>
-
-                    <!-- Navigation Dots -->
-                    <div class="gallery-dots" id="galleryDots">
-                        <button class="gallery-dot active" data-slide="0"></button>
-                        <button class="gallery-dot" data-slide="1"></button>
-                        <button class="gallery-dot" data-slide="2"></button>
-                        <button class="gallery-dot" data-slide="3"></button>
-                        <button class="gallery-dot" data-slide="4"></button>
-                        <button class="gallery-dot" data-slide="5"></button>
-                    </div>
+                <div class="search-input">
+                    <input type="text" id="eventSearch" class="form-input" placeholder="Search events...">
+                </div>
+                
+                <div class="category-buttons">
+                    <button class="category-btn active" data-category="all">All Events</button>
+                    <button class="category-btn" data-category="music">Music</button>
+                    <button class="category-btn" data-category="sports">Sports</button>
+                    <button class="category-btn" data-category="theater">Theater</button>
+                    <button class="category-btn" data-category="conference">Conference</button>
+                    <button class="category-btn" data-category="festival">Festival</button>
                 </div>
             </div>
         </section>
 
-        <!-- Upcoming Events -->
+        <!-- Events Grid -->
         <section class="upcoming-events">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Upcoming Events</h2>
-                    <a href="events.html" class="view-more">View More →</a>
-                </div>
-
                 <div class="events-grid">
-                    <div class="event-card" data-category="music">
+                    <div class="event-card animate-in" data-category="music">
                         <div class="event-image">
                             <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg" alt="Summer Music Festival">
                             <div class="event-overlay"></div>
                         </div>
-
                         <div class="event-content">
                             <h3 class="event-title">Summer Music Festival</h3>
                             <p class="event-description">Join us for an incredible night of live music featuring top artists from around the world.</p>
-
                             <div class="event-details">
                                 <div class="event-detail">
                                     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -171,21 +115,18 @@
                                     Central Park, NYC
                                 </div>
                             </div>
-
                             <a href="event-detail.html?id=1" class="btn btn-primary btn-full">View Event</a>
                         </div>
                     </div>
 
-                    <div class="event-card" data-category="sports">
+                    <div class="event-card animate-in" data-category="sports">
                         <div class="event-image">
                             <img src="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg" alt="Championship Game">
                             <div class="event-overlay"></div>
                         </div>
-
                         <div class="event-content">
                             <h3 class="event-title">Championship Game</h3>
                             <p class="event-description">Experience the thrill of the championship game with the best seats in the house.</p>
-
                             <div class="event-details">
                                 <div class="event-detail">
                                     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -211,21 +152,18 @@
                                     Madison Square Garden
                                 </div>
                             </div>
-
                             <a href="event-detail.html?id=2" class="btn btn-primary btn-full">View Event</a>
                         </div>
                     </div>
 
-                    <div class="event-card" data-category="theater">
+                    <div class="event-card animate-in" data-category="theater">
                         <div class="event-image">
                             <img src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg" alt="Broadway Show">
                             <div class="event-overlay"></div>
                         </div>
-
                         <div class="event-content">
                             <h3 class="event-title">Broadway Show</h3>
                             <p class="event-description">A spectacular theatrical performance that will leave you mesmerized and wanting more.</p>
-
                             <div class="event-details">
                                 <div class="event-detail">
                                     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -251,183 +189,118 @@
                                     Broadway Theater
                                 </div>
                             </div>
-
                             <a href="event-detail.html?id=3" class="btn btn-primary btn-full">View Event</a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Pricing Section -->
-        <section id="pricing" class="pricing">
-            <div class="container">
-                <div class="pricing-content">
-                    <h2 class="section-title">Pricing</h2>
-                    <p class="section-description">No hidden fees. Only pay when you sell tickets.</p>
-
-                    <div class="pricing-card">
-                        <div class="pricing-highlight">
-                            <div class="pricing-amount">5% + $2</div>
-                            <div class="pricing-per">per paid ticket</div>
+                    <div class="event-card animate-in" data-category="conference">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg" alt="Tech Conference 2025">
+                            <div class="event-overlay"></div>
                         </div>
-
-                        <div class="pricing-note">
-                            Free tickets? <span class="text-success">No charge at all!</span>
+                        <div class="event-content">
+                            <h3 class="event-title">Tech Conference 2025</h3>
+                            <p class="event-description">Join industry leaders and innovators for the biggest tech conference of the year.</p>
+                            <div class="event-details">
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    Mon, Sep 1, 2025
+                                </div>
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                    9:00 AM
+                                </div>
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Convention Center
+                                </div>
+                            </div>
+                            <a href="event-detail.html?id=4" class="btn btn-primary btn-full">View Event</a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- FAQ Section -->
-        <section id="faq" class="faq">
-            <div class="container">
-                <div class="faq-content">
-                    <h2 class="section-title">Frequently Asked Questions</h2>
-                    <p class="section-description">
-                        Have questions? We've got answers! If you need more help, feel free to contact us.
-                    </p>
-
-                    <div class="faq-items">
-                        <div class="faq-item">
-                            <button class="faq-question" data-faq="0">
-                                How much does it cost to use this platform?
-                                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <polyline points="6,9 12,15 18,9"/>
-                                </svg>
-                            </button>
-                            <div class="faq-answer">
-                                We charge 5% + $2 per paid ticket sold. There are no hidden fees, and free tickets are completely free with no charges.
-                            </div>
+                    <div class="event-card animate-in" data-category="festival">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg" alt="Food Festival">
+                            <div class="event-overlay"></div>
                         </div>
-
-                        <div class="faq-item">
-                            <button class="faq-question" data-faq="1">
-                                Are there any hidden fees?
-                                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <polyline points="6,9 12,15 18,9"/>
-                                </svg>
-                            </button>
-                            <div class="faq-answer">
-                                No, we believe in transparency. The only fees you pay are 5% + $2 per paid ticket. Free tickets are completely free with no charges.
+                        <div class="event-content">
+                            <h3 class="event-title">Food Festival</h3>
+                            <p class="event-description">Taste amazing dishes from around the world at our annual food festival.</p>
+                            <div class="event-details">
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    Sat, Sep 15, 2025
+                                </div>
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                    11:00 AM
+                                </div>
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    City Park
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <button class="faq-question" data-faq="2">
-                                How is the service fee deducted?
-                                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <polyline points="6,9 12,15 18,9"/>
-                                </svg>
-                            </button>
-                            <div class="faq-answer">
-                                The service fee is automatically deducted from your ticket sales. You receive the ticket price minus our platform fee.
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <button class="faq-question" data-faq="3">
-                                Do buyers pay extra fees?
-                                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <polyline points="6,9 12,15 18,9"/>
-                                </svg>
-                            </button>
-                            <div class="faq-answer">
-                                No, buyers pay only the ticket price you set. All platform fees are deducted from the seller's portion.
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <button class="faq-question" data-faq="4">
-                                How do I get paid for ticket sales?
-                                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <polyline points="6,9 12,15 18,9"/>
-                                </svg>
-                            </button>
-                            <div class="faq-answer">
-                                Payments are processed automatically and transferred to your account after each successful ticket sale, minus our platform fee.
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <button class="faq-question" data-faq="5">
-                                When will I receive my payouts?
-                                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <polyline points="6,9 12,15 18,9"/>
-                                </svg>
-                            </button>
-                            <div class="faq-answer">
-                                Payouts are typically processed within 1-3 business days after a successful ticket sale.
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <button class="faq-question" data-faq="6">
-                                How do I check in attendees?
-                                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <polyline points="6,9 12,15 18,9"/>
-                                </svg>
-                            </button>
-                            <div class="faq-answer">
-                                You can use our mobile app or web dashboard to scan QR codes and check in attendees at your event.
-                            </div>
+                            <a href="event-detail.html?id=5" class="btn btn-primary btn-full">View Event</a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Features Section -->
-        <section class="features">
-            <div class="container">
-                <div class="features-card">
-                    <div class="features-bg"></div>
-
-                    <div class="features-content">
-                        <div class="features-logo">
-                            <div class="features-logo-icon">P</div>
-                            <span class="features-logo-text">POPOUT</span>
+                    <div class="event-card animate-in" data-category="music">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg" alt="Jazz Night">
+                            <div class="event-overlay"></div>
                         </div>
-
-                        <div class="features-grid">
-                            <div class="feature-item">
-                                <span class="feature-name">Swift Payouts</span>
-                                <div class="feature-toggle feature-toggle-active">
-                                    <div class="feature-toggle-circle"></div>
+                        <div class="event-content">
+                            <h3 class="event-title">Jazz Night</h3>
+                            <p class="event-description">An intimate evening of smooth jazz with renowned musicians in a cozy setting.</p>
+                            <div class="event-details">
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    Fri, Sep 20, 2025
+                                </div>
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                    9:00 PM
+                                </div>
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Blue Note Club
                                 </div>
                             </div>
-
-                            <div class="feature-item">
-                                <span class="feature-name">User Friendly</span>
-                                <div class="feature-toggle feature-toggle-active">
-                                    <div class="feature-toggle-circle"></div>
-                                </div>
-                            </div>
-
-                            <div class="feature-item">
-                                <span class="feature-name">Good Customer Service</span>
-                                <div class="feature-toggle feature-toggle-active">
-                                    <div class="feature-toggle-circle"></div>
-                                </div>
-                            </div>
-
-                            <div class="feature-item">
-                                <span class="feature-name">Zero Transaction Delay</span>
-                                <div class="feature-toggle">
-                                    <div class="feature-toggle-circle"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="features-url">
-                            <span>https://www.popouttickets.com</span>
-                        </div>
-
-                        <div class="features-dots">
-                            <div class="features-dot active"></div>
-                            <div class="features-dot"></div>
-                            <div class="features-dot"></div>
+                            <a href="event-detail.html?id=6" class="btn btn-primary btn-full">View Event</a>
                         </div>
                     </div>
                 </div>
@@ -503,5 +376,5 @@
     </footer>
 
     <script src="scripts/main.js"></script>
-  </body>
+</body>
 </html>
