@@ -391,7 +391,7 @@ function initAuthForms() {
                 setTimeout(() => {
                     showToast('Success! Redirecting...', 'success');
                     setTimeout(() => {
-                        window.location.href = 'index.html';
+                        window.location.href = 'verify-and-dashboard.html';
                     }, 1000);
                 }, 2000);
             }

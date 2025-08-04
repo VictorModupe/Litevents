@@ -1,0 +1,34 @@
+.image-gallery {
+  position: relative;
+  background: #fdf2f8; /* section background */
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Top inward curve */
+.image-gallery::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: white; /* match outer background */
+  border-bottom-left-radius: 100% 100px;
+  border-bottom-right-radius: 100% 100px;
+  z-index: 1;
+}
+
+/* Bottom inward curve */
+.image-gallery::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: white; /* match outer background */
+  border-top-left-radius: 100% 100px;
+  border-top-right-radius: 100% 100px;
+  z-index: 1;
+}

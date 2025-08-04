@@ -9,7 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/curve.css">
+        <!-- <link rel="stylesheet" href="/styles/styles.css"> -->
+
   </head>
   <body>
    <!-- Header -->
@@ -17,22 +20,22 @@
         <div class="container">
             <nav class="nav">
                 <!-- Logo -->
-                <a class="nav" href="index.html">
-                    <img src="logo.jpg" alt="Logo" style="width:60px;">
+                <a class="nav" href="/dashboard/">
+                    <img src="/logo.jpg" alt="Logo" style="width:60px;">
                     </a>
 
                 <!-- Desktop Navigation -->
                 <div class="nav-menu" id="navMenu">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="events.html" class="nav-link">Discover Events</a>
+                    <a href="/home/" class="nav-link">Home</a>
+                    <a href="/events/" class="nav-link">Discover Events</a>
                     <a href="index.html#pricing" class="nav-link">Pricing</a>
                     <a href="index.html#faq" class="nav-link">FAQs</a>
                 </div>
 
                 <!-- Auth Buttons -->
                 <div class="auth-buttons">
-                    <a href="login.html" class="btn btn-ghost">Login</a>
-                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    <a href="/signin/" class="btn btn-ghost">Login</a>
+                    <a href="/signup/" class="btn btn-primary">Sign Up</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -64,14 +67,14 @@
                     </p>
 
                     <div class="hero-buttons">
-                        <a href="events.html" class="btn btn-primary btn-large">
+                        <a href="/events/" class="btn btn-primary btn-small">
                             Find Events
                             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
                             </svg>
                         </a>
 
-                        <a href="create-event.html" class="btn btn-outline btn-large">
+                        <a href="/create-events/" class="btn btn-outline btn-small">
                             Create Events
                             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -127,12 +130,14 @@
             </div>
         </section>
 
+        
+
         <!-- Upcoming Events -->
         <section class="upcoming-events">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Upcoming Events</h2>
-                    <a href="events.html" class="view-more">View More →</a>
+                    <a href="/events/" class="view-more">View More →</a>
                 </div>
 
                 <div class="events-grid">
@@ -442,7 +447,7 @@
                 <!-- Logo and Description -->
                 <div class="footer-section">
                     <a class="nav" href="#">
-                        <img src="footer.png" alt="Logo" style="width:60px;">
+                        <img src="/footer.png" alt="Logo" style="width:60px;">
                     </a>
                     <p class="footer-description">
                         Your go-to platform for seamless event ticketing.
@@ -465,7 +470,7 @@
                     <ul class="footer-links">
                         <li><a href="index.html#faq">Help Center</a></li>
                         <li><a href="index.html#faq">FAQs</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="/terms/">Terms & Conditions</a></li>
                         <li><a href="privacy.html">Privacy Policy</a></li>
                     </ul>
                 </div>

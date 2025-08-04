@@ -1,0 +1,84 @@
+  <link rel="stylesheet" href="/dashboard/styles.css">
+  
+
+ <!-- Create Event Page -->
+        <div id="create-event-page" class="page">
+          <div class="page-header">
+            <button class="btn btn-ghost back-btn" onclick="navigateTo('events')">
+              ← BACK
+            </button>
+            <h1 class="page-title">SETUP YOUR EVENT</h1>
+          </div>
+
+          <form id="create-event-form" class="create-event-form">
+            <!-- File Upload -->
+            <div class="form-section">
+              <div class="file-upload-area" id="file-upload">
+                <div class="upload-icon">⬇</div>
+                <p>Click or drop files here to upload (MAX: 5MB)</p>
+                <input type="file" id="event-image" accept="image/*" hidden>
+              </div>
+            </div>
+
+            <!-- Event Details -->
+            <div class="form-section">
+              <div class="form-group">
+                <label for="event-name">Event Name</label>
+                <input type="text" id="event-name" placeholder="Enter event name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="event-description">Event Description</label>
+                <textarea id="event-description" placeholder="Describe your event" rows="4" required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="event-link">Event Link</label>
+                <div class="url-input">
+                  <span class="url-prefix">www.popouttickets.com/</span>
+                  <input type="text" id="event-link" placeholder="my-event" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="event-location">Location</label>
+                <input type="text" id="event-location" placeholder="Enter event location" required>
+              </div>
+
+              <div class="form-group">
+                <label for="event-category">Category</label>
+                <select id="event-category" required>
+                  <option value="">Select a category</option>
+                  <option value="music">Music</option>
+                  <option value="sports">Sports</option>
+                  <option value="comedy">Comedy</option>
+                  <option value="business">Business</option>
+                  <option value="arts">Arts</option>
+                  <option value="party">Party</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="event-date">Event Date</label>
+                  <input type="date" id="event-date" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="event-start-time">Event Start Time</label>
+                  <input type="time" id="event-start-time" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="event-end-time">Event End Time</label>
+                  <input type="time" id="event-end-time" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-outline" onclick="navigateTo('events')">Back</button>
+              <button type="submit" class="btn btn-primary">Continue</button>
+            </div>
+          </form>
+        </div>
