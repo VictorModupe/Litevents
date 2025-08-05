@@ -1,45 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lite Events Tickets – Your Gateway to Unforgettable Live Events</title>
     <meta name="description" content="Discover and book tickets for concerts, sports, theater, and more with Lite Events Tickets. Experience seamless booking, curated events, and exceptional customer service for every occasion.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/curve.css">
-
-  </head>
-  <body>
-   <!-- Header -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/curve.css">
+</head>
+<body>
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="nav">
                 <!-- Logo -->
-                <a class="nav" href="/home/">
-                    <img src="/logo.jpg" alt="Logo" style="width:60px;">
-                    </a>
+                <a class="nav-logo" href="/">
+                    <img src="logo.jpg" alt="Lite Events Logo" style="width:60px; height:60px; object-fit:contain;">
+                </a>
 
                 <!-- Desktop Navigation -->
                 <div class="nav-menu" id="navMenu">
-                    <a href="/home/" class="nav-link">Home</a>
-                    <a href="/events/" class="nav-link">Discover Events</a>
-                    <a href="/home/index.html#pricing" class="nav-link">Pricing</a>
-                    <a href="/home/index.html#faq" class="nav-link">FAQs</a>
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="events/" class="nav-link">Discover Events</a>
+                    <a href="#pricing" class="nav-link">Pricing</a>
+                    <a href="#faq" class="nav-link">FAQs</a>
                 </div>
 
                 <!-- Auth Buttons -->
                 <div class="auth-buttons">
-                    <a href="/signin/" class="btn btn-ghost">Login</a>
-                    <a href="/signup/" class="btn btn-primary">Sign Up</a>
+                    <a href="signin/" class="btn btn-ghost">Login</a>
+                    <a href="signup/" class="btn btn-primary">Sign Up</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -47,7 +44,6 @@
             </nav>
         </div>
     </header>
-    <!-- Header -->
 
     <main>
         <!-- Hero Section -->
@@ -67,14 +63,14 @@
                     </p>
 
                     <div class="hero-buttons">
-                        <a href="/events/" class="btn btn-primary btn-small">
+                        <a href="events/" class="btn btn-primary btn-small">
                             Find Events
                             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
                             </svg>
                         </a>
 
-                        <a href="/create-events/" class="btn btn-outline btn-small">
+                        <a href="events/" class="btn btn-outline btn-small">
                             Create Events
                             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -119,25 +115,23 @@
 
                     <!-- Navigation Dots -->
                     <div class="gallery-dots" id="galleryDots">
-                        <button class="gallery-dot active" data-slide="0"></button>
-                        <button class="gallery-dot" data-slide="1"></button>
-                        <button class="gallery-dot" data-slide="2"></button>
-                        <button class="gallery-dot" data-slide="3"></button>
-                        <button class="gallery-dot" data-slide="4"></button>
-                        <button class="gallery-dot" data-slide="5"></button>
+                        <button class="gallery-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+                        <button class="gallery-dot" data-slide="1" aria-label="Go to slide 2"></button>
+                        <button class="gallery-dot" data-slide="2" aria-label="Go to slide 3"></button>
+                        <button class="gallery-dot" data-slide="3" aria-label="Go to slide 4"></button>
+                        <button class="gallery-dot" data-slide="4" aria-label="Go to slide 5"></button>
+                        <button class="gallery-dot" data-slide="5" aria-label="Go to slide 6"></button>
                     </div>
                 </div>
             </div>
         </section>
-
-        
 
         <!-- Upcoming Events -->
         <section class="upcoming-events">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Upcoming Events</h2>
-                    <a href="/events/" class="view-more">View More →</a>
+                    <a href="events/" class="view-more">View More →</a>
                 </div>
 
                 <div class="events-grid">
@@ -177,7 +171,7 @@
                                 </div>
                             </div>
 
-                            <a href="event-detail.html?id=1" class="btn btn-primary btn-full">View Event</a>
+                            <a href="events/event-detail.html?id=1" class="btn btn-primary btn-full">View Event</a>
                         </div>
                     </div>
 
@@ -217,7 +211,7 @@
                                 </div>
                             </div>
 
-                            <a href="event-detail.html?id=2" class="btn btn-primary btn-full">View Event</a>
+                            <a href="events/event-detail.html?id=2" class="btn btn-primary btn-full">View Event</a>
                         </div>
                     </div>
 
@@ -257,7 +251,7 @@
                                 </div>
                             </div>
 
-                            <a href="event-detail.html?id=3" class="btn btn-primary btn-full">View Event</a>
+                            <a href="events/event-detail.html?id=3" class="btn btn-primary btn-full">View Event</a>
                         </div>
                     </div>
                 </div>
@@ -426,7 +420,7 @@
                         </div>
 
                         <div class="features-url">
-                            <span></span>
+                            <span>lite-events.com</span>
                         </div>
 
                         <div class="features-dots">
@@ -446,8 +440,8 @@
             <div class="footer-content">
                 <!-- Logo and Description -->
                 <div class="footer-section">
-                    <a class="nav" href="#">
-                        <img src="/footer.png" alt="Logo" style="width:60px;">
+                    <a class="nav-logo" href="/">
+                        <img src="footer.png" alt="Lite Events Logo" style="width:60px; height:60px; object-fit:contain;">
                     </a>
                     <p class="footer-description">
                         Your go-to platform for seamless event ticketing.
@@ -458,9 +452,9 @@
                 <div class="footer-section">
                     <h3 class="footer-title">Explore</h3>
                     <ul class="footer-links">
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="index.html#pricing">Pricing</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="events/">Events</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="contact/">Contact</a></li>
                     </ul>
                 </div>
 
@@ -468,10 +462,10 @@
                 <div class="footer-section">
                     <h3 class="footer-title">Support</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html#faq">Help Center</a></li>
-                        <li><a href="index.html#faq">FAQs</a></li>
-                        <li><a href="/terms/">Terms & Conditions</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="#faq">Help Center</a></li>
+                        <li><a href="#faq">FAQs</a></li>
+                        <li><a href="terms/">Terms & Conditions</a></li>
+                        <li><a href="privacy/">Privacy Policy</a></li>
                     </ul>
                 </div>
 
@@ -499,15 +493,15 @@
                     © 2025 Lite Tickets. All rights reserved.
                 </p>
                 <div class="footer-bottom-links">
-                    <a href="terms.html">Terms</a>
-                    <a href="privacy.html">Privacy</a>
-                    <a href="">Contact</a>
+                    <a href="terms/">Terms</a>
+                    <a href="privacy/">Privacy</a>
+                    <a href="contact/">Contact</a>
                 </div>
             </div>
         </div>
     </footer>
 
-        <script src="faq.js"></script>
-    <script src="/scripts/main.js"></script>
-  </body>
+    <script src="scripts/faq.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
 </html>

@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Event - Lite Tickets</title>
-    <meta name="description" content="We are the best event ticketing platform.">
+    <title>Discover Events - Lite Events Tickets</title>
+    <meta name="description" content="Discover amazing events near you. Browse concerts, sports, theater, and more.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/styles.css">
-
+    <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body>
     <!-- Header -->
@@ -18,26 +16,26 @@
         <div class="container">
             <nav class="nav">
                 <!-- Logo -->
-                <a class="nav" href="/home">
-                    <img src="/logo.jpg" alt="Logo" style="width:60px;">
+                <a class="nav-logo" href="../">
+                    <img src="../logo.jpg" alt="Lite Events Logo" style="width:60px; height:60px; object-fit:contain;">
                 </a>
 
                 <!-- Desktop Navigation -->
                 <div class="nav-menu" id="navMenu">
-                    <a href="/home/" class="nav-link">Home</a>
-                    <a href="/events/" class="nav-link">Discover Events</a>
-                    <a href="/home/index.html#pricing" class="nav-link">Pricing</a>
-                    <a href="/home/index.html#faq" class="nav-link">FAQs</a>
+                    <a href="../" class="nav-link">Home</a>
+                    <a href="./" class="nav-link">Discover Events</a>
+                    <a href="../#pricing" class="nav-link">Pricing</a>
+                    <a href="../#faq" class="nav-link">FAQs</a>
                 </div>
 
                 <!-- Auth Buttons -->
                 <div class="auth-buttons">
-                    <a href="/signin/" class="btn btn-ghost">Login</a>
-                    <a href="/signup/" class="btn btn-primary">Sign Up</a>
+                    <a href="../signin/" class="btn btn-ghost">Login</a>
+                    <a href="../signup/" class="btn btn-primary">Sign Up</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -45,145 +43,305 @@
             </nav>
         </div>
     </header>
-    <!-- Header -->
 
     <main>
-        <!-- Create Event Section -->
-        <section style="padding: 4rem 0;">
+        <!-- Events Header -->
+        <section style="padding: 4rem 0 2rem;">
             <div class="container">
-                <div style="max-width: 600px; margin: 0 auto;">
-                    <!-- Header -->
-                    <div style="text-align: center; margin-bottom: 3rem;">
-                        <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; color: #111827;">
-                            Create Your <span class="text-gradient">Event</span>
-                        </h1>
-                        <p style="color: #6b7280; font-size: 1.125rem;">
-                            Fill out the details below to create and publish your event
-                        </p>
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; color: #111827;">
+                        Discover <span class="text-gradient">Amazing Events</span>
+                    </h1>
+                    <p style="color: #6b7280; font-size: 1.125rem; max-width: 600px; margin: 0 auto;">
+                        Find the perfect event for you. From concerts to conferences, we have something for everyone.
+                    </p>
+                </div>
+
+                <!-- Search and Filter -->
+                <div class="search-filter-section">
+                    <div class="search-input">
+                        <input type="text" id="eventSearch" placeholder="Search events..." class="form-input">
+                    </div>
+                    
+                    <div class="category-buttons">
+                        <button class="category-btn active" data-category="all">All Events</button>
+                        <button class="category-btn" data-category="music">Music</button>
+                        <button class="category-btn" data-category="sports">Sports</button>
+                        <button class="category-btn" data-category="theater">Theater</button>
+                        <button class="category-btn" data-category="conference">Conference</button>
+                        <button class="category-btn" data-category="festival">Festival</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Grid -->
+        <section style="padding: 2rem 0 4rem;">
+            <div class="container">
+                <div class="events-grid">
+                    <div class="event-card" data-category="music">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg" alt="Summer Music Festival">
+                            <div class="event-overlay"></div>
+                        </div>
+
+                        <div class="event-content">
+                            <h3 class="event-title">Summer Music Festival</h3>
+                            <p class="event-description">Join us for an incredible night of live music featuring top artists from around the world.</p>
+
+                            <div class="event-details">
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    Sat, Aug 15, 2025
+                                </div>
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                    7:00 PM
+                                </div>
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Central Park, NYC
+                                </div>
+                            </div>
+
+                            <div class="event-price">
+                                <span class="price">$75</span>
+                            </div>
+
+                            <a href="event-detail.html?id=1" class="btn btn-primary btn-full">Buy Tickets</a>
+                        </div>
                     </div>
 
-                    <!-- Event Creation Form -->
-                    <form id="eventForm" style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
-                        <!-- Basic Information -->
-                        <div style="margin-bottom: 2rem;">
-                            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: #111827;">Basic Information</h3>
-                            
-                            <div class="form-group">
-                                <label for="eventTitle" class="form-label">Event Title</label>
-                                <input type="text" id="eventTitle" class="form-input" required placeholder="Enter event title">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="eventDescription" class="form-label">Event Description</label>
-                                <textarea id="eventDescription" class="form-textarea" rows="4" required placeholder="Describe your event"></textarea>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="eventCategory" class="form-label">Category</label>
-                                <select id="eventCategory" class="form-select" required>
-                                    <option value="">Select a category</option>
-                                    <option value="music">Music</option>
-                                    <option value="sports">Sports</option>
-                                    <option value="theater">Theater</option>
-                                    <option value="conference">Conference</option>
-                                    <option value="festival">Festival</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
+                    <div class="event-card" data-category="sports">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg" alt="Championship Game">
+                            <div class="event-overlay"></div>
                         </div>
 
-                        <!-- Date and Time -->
-                        <div style="margin-bottom: 2rem;">
-                            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: #111827;">Date & Time</h3>
-                            
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                                <div class="form-group">
-                                    <label for="eventDate" class="form-label">Event Date</label>
-                                    <input type="date" id="eventDate" class="form-input" required>
-                                </div>
+                        <div class="event-content">
+                            <h3 class="event-title">Championship Game</h3>
+                            <p class="event-description">Experience the thrill of the championship game with the best seats in the house.</p>
 
-                                <div class="form-group">
-                                    <label for="eventTime" class="form-label">Event Time</label>
-                                    <input type="time" id="eventTime" class="form-input" required>
+                            <div class="event-details">
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    Sun, Aug 20, 2025
+                                </div>
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                    3:00 PM
+                                </div>
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Madison Square Garden
                                 </div>
                             </div>
+
+                            <div class="event-price">
+                                <span class="price">$120</span>
+                            </div>
+
+                            <a href="event-detail.html?id=2" class="btn btn-primary btn-full">Buy Tickets</a>
+                        </div>
+                    </div>
+
+                    <div class="event-card" data-category="theater">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg" alt="Broadway Show">
+                            <div class="event-overlay"></div>
                         </div>
 
-                        <!-- Location -->
-                        <div style="margin-bottom: 2rem;">
-                            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: #111827;">Location</h3>
-                            
-                            <div style="margin-bottom: 1rem;">
-                                <div class="form-checkbox">
-                                    <input type="radio" id="physical" name="locationType" value="physical" checked>
-                                    <label for="physical" style="font-weight: 500;">Physical Location</label>
+                        <div class="event-content">
+                            <h3 class="event-title">Broadway Show</h3>
+                            <p class="event-description">A spectacular theatrical performance that will leave you mesmerized and wanting more.</p>
+
+                            <div class="event-details">
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    Fri, Aug 25, 2025
                                 </div>
-                                <div class="form-checkbox" style="margin-top: 0.5rem;">
-                                    <input type="radio" id="online" name="locationType" value="online">
-                                    <label for="online" style="font-weight: 500;">Online Event</label>
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                    8:00 PM
+                                </div>
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Broadway Theater
                                 </div>
                             </div>
 
-                            <div class="venue-section">
-                                <div class="form-group">
-                                    <label for="venueName" class="form-label">Venue Name</label>
-                                    <input type="text" id="venueName" class="form-input" required placeholder="Enter venue name">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="venueAddress" class="form-label">Address</label>
-                                    <input type="text" id="venueAddress" class="form-input" required placeholder="Enter venue address">
-                                </div>
+                            <div class="event-price">
+                                <span class="price">$95</span>
                             </div>
+
+                            <a href="event-detail.html?id=3" class="btn btn-primary btn-full">Buy Tickets</a>
+                        </div>
+                    </div>
+
+                    <div class="event-card" data-category="conference">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg" alt="Tech Conference">
+                            <div class="event-overlay"></div>
                         </div>
 
-                        <!-- Tickets -->
-                        <div style="margin-bottom: 2rem;">
-                            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: #111827;">Tickets</h3>
-                            
-                            <div style="margin-bottom: 1rem;">
-                                <div class="form-checkbox">
-                                    <input type="checkbox" id="freeEvent">
-                                    <label for="freeEvent" style="font-weight: 500;">This is a free event</label>
+                        <div class="event-content">
+                            <h3 class="event-title">Tech Conference 2025</h3>
+                            <p class="event-description">Join industry leaders and innovators for a day of insights and networking.</p>
+
+                            <div class="event-details">
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    Mon, Sep 10, 2025
+                                </div>
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                    9:00 AM
+                                </div>
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Convention Center
                                 </div>
                             </div>
 
-                            <div class="ticket-section">
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                                    <div class="form-group">
-                                        <label for="ticketPrice" class="form-label">Ticket Price ($)</label>
-                                        <input type="number" id="ticketPrice" class="form-input" min="0" step="0.01" placeholder="0.00">
-                                    </div>
+                            <div class="event-price">
+                                <span class="price">$199</span>
+                            </div>
 
-                                    <div class="form-group">
-                                        <label for="ticketQuantity" class="form-label">Available Tickets</label>
-                                        <input type="number" id="ticketQuantity" class="form-input" min="1" required placeholder="100">
-                                    </div>
+                            <a href="event-detail.html?id=4" class="btn btn-primary btn-full">Buy Tickets</a>
+                        </div>
+                    </div>
+
+                    <div class="event-card" data-category="festival">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg" alt="Food Festival">
+                            <div class="event-overlay"></div>
+                        </div>
+
+                        <div class="event-content">
+                            <h3 class="event-title">Food & Wine Festival</h3>
+                            <p class="event-description">Taste the best cuisine from local chefs and discover new flavors.</p>
+
+                            <div class="event-details">
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    Sat, Oct 5, 2025
+                                </div>
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                    12:00 PM
+                                </div>
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Riverside Park
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Event Image -->
-                        <div style="margin-bottom: 2rem;">
-                            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: #111827;">Event Image</h3>
-                            
-                            <div class="form-group">
-                                <label for="eventImage" class="form-label">Upload Image</label>
-                                <input type="file" id="eventImage" class="form-input" accept="image/*">
-                                <p style="font-size: 0.875rem; color: #6b7280; margin-top: 0.25rem;">
-                                    Upload a high-quality image that represents your event
-                                </p>
+                            <div class="event-price">
+                                <span class="price">$45</span>
                             </div>
+
+                            <a href="event-detail.html?id=5" class="btn btn-primary btn-full">Buy Tickets</a>
+                        </div>
+                    </div>
+
+                    <div class="event-card" data-category="music">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg" alt="Jazz Night">
+                            <div class="event-overlay"></div>
                         </div>
 
-                        <!-- Submit Button -->
-                        <button type="submit" class="btn btn-primary btn-full btn-large">
-                            Create Event
-                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M5 12h14M12 5l7 7-7 7"/>
-                            </svg>
-                        </button>
-                    </form>
+                        <div class="event-content">
+                            <h3 class="event-title">Jazz Night</h3>
+                            <p class="event-description">An intimate evening of smooth jazz with renowned musicians.</p>
+
+                            <div class="event-details">
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    Fri, Nov 15, 2025
+                                </div>
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                    8:30 PM
+                                </div>
+                                <div class="event-detail">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Blue Note Club
+                                </div>
+                            </div>
+
+                            <div class="event-price">
+                                <span class="price">$55</span>
+                            </div>
+
+                            <a href="event-detail.html?id=6" class="btn btn-primary btn-full">Buy Tickets</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -195,8 +353,8 @@
             <div class="footer-content">
                 <!-- Logo and Description -->
                 <div class="footer-section">
-                    <a class="nav" href="#">
-                        <img src="/footer.png" alt="Logo" style="width:60px;">
+                    <a class="nav-logo" href="../">
+                        <img src="../footer.png" alt="Lite Events Logo" style="width:60px; height:60px; object-fit:contain;">
                     </a>
                     <p class="footer-description">
                         Your go-to platform for seamless event ticketing.
@@ -207,9 +365,9 @@
                 <div class="footer-section">
                     <h3 class="footer-title">Explore</h3>
                     <ul class="footer-links">
-                        <li><a href="/events/">Events</a></li>
-                        <li><a href="/home/index.html#pricing">Pricing</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="./">Events</a></li>
+                        <li><a href="../#pricing">Pricing</a></li>
+                        <li><a href="../contact/">Contact</a></li>
                     </ul>
                 </div>
 
@@ -217,10 +375,10 @@
                 <div class="footer-section">
                     <h3 class="footer-title">Support</h3>
                     <ul class="footer-links">
-                        <li><a href="/home/index.html#faq">Help Center</a></li>
-                        <li><a href="/home/index.html#faq">FAQs</a></li>
-                        <li><a href="/terms/">Terms & Conditions</a></li>
-                        <li><a href="/privacy/">Privacy Policy</a></li>
+                        <li><a href="../#faq">Help Center</a></li>
+                        <li><a href="../#faq">FAQs</a></li>
+                        <li><a href="../terms/">Terms & Conditions</a></li>
+                        <li><a href="../privacy/">Privacy Policy</a></li>
                     </ul>
                 </div>
 
@@ -248,22 +406,14 @@
                     © 2025 Lite Tickets. All rights reserved.
                 </p>
                 <div class="footer-bottom-links">
-                    <a href="/terms/">Terms</a>
-                    <a href="privacy.html">Privacy</a>
-                    <a href="">Contact</a>
+                    <a href="../terms/">Terms</a>
+                    <a href="../privacy/">Privacy</a>
+                    <a href="../contact/">Contact</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="scripts/main.js"></script>
-
-    <style>
-        @media (max-width: 768px) {
-            div[style*="grid-template-columns: 1fr 1fr"] {
-                grid-template-columns: 1fr !important;
-            }
-        }
-    </style>
+    <script src="../scripts/main.js"></script>
 </body>
 </html>
