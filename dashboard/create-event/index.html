@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lite Events Tickets Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
+    <link rel="stylesheet" href="/dashboard/styles.css">
+
+</head>
+
+<body>
+
+    <div id="dashboard-container" class="dashboard-container">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon">L</div>
+                    <span class="logo-text">LiteEvents</span>
+                </div>
+                <button id="sidebar-toggle" class="sidebar-toggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+
+            <nav class="sidebar-nav">
+                <a href="/dashboard/create-event/" class="nav-item {% if active_page == 'dashboard' %}active{% endif %}"
+                    data-page="dashboard">
+                    Dashboard
+                </a>
+                <a href="/dashboard/events/" class="nav-item {% if active_page == 'events' %}active{% endif %}"
+                    data-page="events">Events</a>
+                <a href="/dashboard/wallet/" class="nav-item {% if active_page == 'wallet' %}active{% endif %}"
+                    data-page="wallet">Wallet</a>
+                <a href="/dashboard/settings/" class="nav-item {% if active_page == 'settings' %}active{% endif %}"
+                    data-page="settings">Settings</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="https://wa.me/{{ support_number }}" class="nav-item">Contact</a>
+                <a href="/logout/" class="nav-item logout" onclick="logout()">Logout</a>
+            </div>
+        </aside>
+
+        <!-- Overlay -->
+        <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+ 
+        <!-- Create Event Page -->
+        <div id="create-event-page" class="page active">
+            <div class="page-header">
+                <button class="btn btn-ghost back-btn" onclick="navigateTo('events')">← BACK</button>
+                <h1 class="page-title">SETUP YOUR EVENT</h1>
+            </div>
+
+            <form id="create-event-form" class="create-event-form">
+                <div class="form-section">
+                    <div class="file-upload-area" id="file-upload">
+                        <div class="upload-icon">⬇</div>
+                        <p>Click or drop files here to upload (MAX: 5MB)</p>
+                        <input type="file" id="event-image" accept="image/*" hidden>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-group">
+                        <label for="event-name">Event Name</label>
+                        <input type="text" id="event-name" placeholder="Enter event name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event-description">Event Description</label>
+                        <textarea id="event-description" placeholder="Describe your event" rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event-link">Event Link</label>
+                        <div class="url-input">
+                            <span class="url-prefix"></span>
+                            <input type="text" id="event-link" placeholder="my-event" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event-location">Location</label>
+                        <input type="text" id="event-location" placeholder="Enter event location" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event-category">Category</label>
+                        <select id="event-category" required>
+                            <option value="">Select a category</option>
+                            {% for cat in categories %}
+                            <option value="{{ cat.value }}">{{ cat.label }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="event-date">Event Date</label>
+                            <input type="date" id="event-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-start-time">Event Start Time</label>
+                            <input type="time" id="event-start-time" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-end-time">Event End Time</label>
+                            <input type="time" id="event-end-time" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-outline" onclick="navigateTo('events')">Back</button>
+                    <button type="submit" class="btn btn-primary">Continue</button>
+                </div>
+            </form>
+        </div>
+
+
+        <!-- Toast Notifications -->
+        <div id="toast-container" class="toast-container"></div>
+    </div>
+
+    <!-- <script src="{{ url_for('static', filename='main.js') }}" type="module"></script> -->
+    <script src="main.js" type="module"></script>
+
+</body>
+
+</html>

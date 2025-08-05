@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page_title or "Lite Events Tickets Dashboard" }}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <div id="dashboard-container" class="dashboard-container">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar"> 
+      <div class="sidebar-header">
+        <div class="logo">
+          <div class="logo-icon">L</div>
+          <span class="logo-text">LiteEvents</span>
+        </div>
+        <button id="sidebar-toggle" class="sidebar-toggle">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="/dashboard" class="nav-item {% if active_page == 'dashboard' %}active{% endif %}" data-page="dashboard">
+          <!-- SVG omitted for brevity -->
+          Dashboard
+        </a>
+        <a href="/events/" class="nav-item {% if active_page == 'events' %}active{% endif %}" data-page="events">Events</a>
+        <a href="/wallet/" class="nav-item {% if active_page == 'wallet' %}active{% endif %}" data-page="wallet">Wallet</a>
+        <a href="/settings/" class="nav-item {% if active_page == 'settings' %}active{% endif %}" data-page="settings">Settings</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="https://wa.me/{{ support_number }}" class="nav-item">Contact</a>
+        <a href="/logout/" class="nav-item logout" onclick="logout()">Logout</a>
+      </div>
+    </aside>
+
+    <!-- Overlay -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content">
+
+      <!-- Dashboard Page -->
+      {% if active_page == 'dashboard' %}
+      <div id="dashboard-page" class="page active">
+        <div class="page-header">
+          <h1 class="page-title">HELLO <span id="user-name">{{ user_name }}</span> 👋</h1>
+        </div>
+
+        <div class="dashboard-stats">
+          <div class="stat-card">
+            <div class="stat-label">Account Balance:</div>
+            <div class="stat-value">₦<span id="account-balance">{{ account_balance }}</span></div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-label">Total Events:</div>
+            <div class="stat-value"><span id="total-events">{{ total_events }}</span></div>
+          </div>
+        </div>
+
+        <div class="dashboard-section">
+          <div class="section-header">
+            <h2>Upcoming Events</h2>
+            <button class="btn btn-outline" onclick="navigateTo('events')">View All Events</button>
+          </div>
+          <div class="upcoming-events" id="upcoming-events">
+            {% if upcoming_events %}
+              {% for event in upcoming_events %}
+                <div class="event-card">{{ event.name }}</div>
+              {% endfor %}
+            {% else %}
+              <div class="empty-state"><p>No upcoming events</p></div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+     
+
+    </main>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+  </div>
+
+  <!-- <script src="{{ url_for('static', filename='main.js') }}" type="module"></script> -->
+     <script src="main.js" type="module"></script>
+
+</body>
+</html>

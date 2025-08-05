@@ -1,0 +1,49 @@
+
+      <!-- Events Page -->
+      {% if active_page == 'events' %}
+      <div id="events-page" class="page active">
+        <div class="page-header">
+          <h1 class="page-title">EVENTS</h1>
+          <button class="btn btn-primary" onclick="navigateTo('create-event')">Create New Event</button>
+        </div>
+
+        <div class="events-stats">
+          <div class="stat-card">
+            <div class="stat-label">Total Events:</div>
+            <div class="stat-value"><span id="events-total">{{ total_events }}</span></div>
+          </div>
+        </div>
+
+        <div class="events-section">
+          <h2>Upcoming Events</h2>
+          <div class="events-container" id="upcoming-events-list">
+            {% if upcoming_events %}
+              {% for event in upcoming_events %}
+                <div class="event-card">{{ event.name }}</div>
+              {% endfor %}
+            {% else %}
+              <div class="empty-state">
+                <p>No upcoming events</p>
+                <button class="btn btn-primary" onclick="navigateTo('create-event')">Create New Event</button>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="events-section">
+          <h2>All Events</h2>
+          <div class="events-container" id="all-events-list">
+            {% if all_events %}
+              {% for event in all_events %}
+                <div class="event-card">{{ event.name }}</div>
+              {% endfor %}
+            {% else %}
+              <div class="empty-state">
+                <p>No events</p>
+                <button class="btn btn-primary" onclick="navigateTo('create-event')">Create New Event</button>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endif %}
