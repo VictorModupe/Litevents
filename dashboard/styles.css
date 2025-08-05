@@ -136,7 +136,7 @@ body {
 }
 
 .auth-page {
-  display: none;
+  /* display: none; */
   width: 100%;
   max-width: 420px;
 }
@@ -370,7 +370,7 @@ body {
 
 /* Dashboard Layout */
 .dashboard-container {
-  display: none;
+  /* display: none; */
   min-height: 100vh;
   background: var(--bg-secondary);
 }
@@ -415,7 +415,7 @@ body {
 }
 
 .sidebar-toggle {
-  display: none;
+  /* display: none; */
   background: none;
   border: none;
   cursor: pointer;
@@ -767,7 +767,7 @@ body {
 
 /* Modal Styles */
 .modal {
-  display: none;
+  /* display: none; */
   position: fixed;
   top: 0;
   left: 0;
