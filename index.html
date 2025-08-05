@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/curve.css">
+        <link rel="stylesheet" href="styles/curve.css">
+
 </head>
 <body>
     <!-- Header Component -->
@@ -38,8 +39,40 @@
     <!-- Footer Component -->
     <div id="footer-component"></div>
 
-    <script src="scripts/faq.js"></script>
-    <script src="scripts/main.js"></script>
-    <script src="scripts/components.js"></script>
+
+    <script>
+        // Function to load HTML components
+        async function loadComponent(componentPath, targetId) {
+            try {
+                const response = await fetch(componentPath);
+                const html = await response.text();
+                document.getElementById(targetId).innerHTML = html;
+            } catch (error) {
+                console.error(`Error loading component ${componentPath}:`, error);
+            }
+        }
+
+        // Load all components when DOM is ready
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Load all components
+            await Promise.all([
+                loadComponent('components/header.html', 'header-component'),
+                loadComponent('components/hero.html', 'hero-component'),
+                loadComponent('components/gallery.html', 'gallery-component'),
+                loadComponent('components/events.html', 'events-component'),
+                loadComponent('components/pricing.html', 'pricing-component'),
+                loadComponent('components/faq.html', 'faq-component'),
+                loadComponent('components/features.html', 'features-component'),
+                loadComponent('components/footer.html', 'footer-component')
+            ]);
+
+            // Load main JavaScript after components are loaded
+            const script = document.createElement('script');
+            script.src = 'scripts/main.js';
+            document.body.appendChild(script);
+        });
+    </script>
 </body>
 </html>
+    <script src="scripts/faq.js"></script>
+    <script src="scripts/main.js"></script>

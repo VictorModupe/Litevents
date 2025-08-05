@@ -1,27 +1,52 @@
+<!-- Header Component -->
+         <link rel="stylesheet" href="/home-style/main.css">
 <header class="header">
     <div class="container">
         <nav class="nav">
+            <!-- Logo -->
             <a class="nav-logo" href="/">
-                <img src="logo.jpg" alt="Lite Events Logo">
+                <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                    L
+                </div>
+                <span class="text-xl font-bold text-gray-900 ml-2">Lite Events</span>
             </a>
 
+            <!-- Desktop Navigation -->
             <div class="nav-menu" id="navMenu">
                 <a href="/" class="nav-link">Home</a>
-                <a href="events/" class="nav-link">Discover Events</a>
+                <a href="/events/" class="nav-link">Discover Events</a>
                 <a href="#pricing" class="nav-link">Pricing</a>
                 <a href="#faq" class="nav-link">FAQs</a>
             </div>
 
+            <!-- Auth Buttons -->
             <div class="auth-buttons">
-                <a href="signin/" class="btn btn-ghost">Login</a>
-                <a href="signup/" class="btn btn-primary">Sign Up</a>
+                <a href="/signin/" class="btn btn-ghost">Login</a>
+                <a href="/signup/" class="btn btn-primary">Sign Up</a>
             </div>
 
+            <!-- Mobile Menu Button -->
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
         </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <a href="/" class="mobile-menu-link">Home</a>
+                <a href="/events/" class="mobile-menu-link">Discover Events</a>
+                <a href="#pricing" class="mobile-menu-link">Pricing</a>
+                <a href="#faq" class="mobile-menu-link">FAQs</a>
+                <div class="mobile-menu-auth">
+                    <a href="signin/" class="btn btn-ghost btn-full">Login</a>
+                    <a href="signup/" class="btn btn-primary btn-full">Sign Up</a>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
+<script src="scripts/faq.js"></script>
+<script src="scripts/main.js"></script>
